@@ -8,6 +8,7 @@ TENSOR_BOARD_SIF="oras://singularity-master.artifacts.speechmatics.io/tensorboar
 # Quick navigation add more here
 alias a="cd ~/git/aladdin"
 alias a2="cd ~/git/aladdin2"
+alias a3="cd ~/git/aladdin3"
 alias cde="cd /exp/$(whoami)"
 alias cdt="cd ~/tb"
 alias cdn="cd ~/notebooks"
@@ -27,6 +28,8 @@ alias b2="ssh b2"
 alias b3="ssh b3"
 alias b4="ssh b4"
 alias b5="ssh b5"
+alias b6="ssh b6"
+alias b7="ssh b7"
 
 # Change to aladdin directory and activate SIF
 alias msa="make -C /home/$(whoami)/git/aladdin/ shell"
@@ -111,6 +114,7 @@ alias q='qstat'
 alias qtop='qalter -p 1024'
 alias qq=$full_queue # Display full queue
 alias gq='qstat -q aml-gpu.q -f -u \*' # Display just the gpu queues
+alias hq='qstat -q "gcp-gpu.q" -f -u \* | less' #Display GCP queues
 alias gqf='qstat -q aml-gpu.q -u \* -r -F gpu | egrep -v "jobname|Master|Binding|Hard|Soft|Requested|Granted"' # Display the gpu queues, including showing the preemption state of each job
 alias cq='qstat -q "aml-cpu.q@gpu*" -f -u \*' # Display just the cpu queues
 alias wq="watch qstat"
@@ -118,24 +122,21 @@ alias wqq="watch $full_queue"
 
 # Queue functions
 qlogin () {
-  # Function to request gpu or cpu access
-  # example:
-  #    qlogin 2                request 2 gpus
-  #    qlogin 1 cpu            request 1 cpu slot
-  #    qlogin 1 aml-gpu.q@b5   request 1 gpu on b5
   if [ "$#" -eq 1 ]; then
     /usr/bin/qlogin -now n -pe smp $1 -q aml-gpu.q -l gpu=$1 -N D_$(whoami)
   elif [ "$#" -eq 2 ]; then
-    if [ "$2" = "cpu" ]; then
-      queue="aml-cpu.q"
+    if [ "$1" = "cpu" ]; then
+            /usr/bin/qlogin -now n -pe smp $2 -q aml-cpu.q -N D_$(whoami)
     else
-      queue="$2"
+            /usr/bin/qlogin -now n -pe smp $1 -q $2 -l gpu=$1 -N D_$(whoami)
     fi
-    /usr/bin/qlogin -now n -pe smp $1 -q $queue -l gpu=$1 -N D_$(whoami)
+  elif [ "$#" -eq 3 ]; then
+    /usr/bin/qlogin -now n -pe smp $2 -q $3 -N D_$(whoami)
   else
     echo "Usage: qlogin <num_gpus>" >&2
     echo "Usage: qlogin <num_gpus> <queue>" >&2
-    echo "Usage: qlogin <num_slots> cpu" >&2
+    echo "Usage: qlogin cpu <num_slots>" >&2
+    echo "Usage: qlogin cpu <num_slots> <queue>" >&2
   fi
 }
 qtail () {

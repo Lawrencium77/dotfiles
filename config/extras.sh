@@ -23,6 +23,7 @@ zstyle ':completion:*' hosts off
  
 bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
+bindkey "^ " autosuggest-accept
  
 
 # This speeds up pasting w/ autosuggest

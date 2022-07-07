@@ -10,6 +10,7 @@ alias jp="jupyter lab"
 # -------------------------------------------------------------------
 # general
 # -------------------------------------------------------------------
+alias exp='cd /exp/lawrencea'
 
 alias cl="clear"
 
@@ -18,6 +19,7 @@ alias rmd='rm -rf'
 alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -p'
+alias mva='mv -t /exp/lawrencea/archive'
 
 # find/read files
 alias h='head'
@@ -101,7 +103,8 @@ alias gstd="git stash drop"
 alias gstc="git stash clear"
 
 alias ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'
-alias gpsup='git push --set-upstream origin $(git_current_branch)'
+alias gpsup='git push --set-upstream-to=origin/$(git_current_branch)'
+alias gpp='git push --set-upstream origin $(git_current_branch)'
 
 #-------------------------------------------------------------
 # tmux
