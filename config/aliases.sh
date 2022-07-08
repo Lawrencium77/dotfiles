@@ -11,7 +11,7 @@ alias jp="jupyter lab"
 # general
 # -------------------------------------------------------------------
 alias exp='cd /exp/lawrencea'
-
+alias vm="ssh $(whoami).dev-vms.speechmatics.io"
 alias cl="clear"
 
 # file and directories
