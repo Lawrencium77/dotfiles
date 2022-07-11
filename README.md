@@ -13,7 +13,7 @@ Deploy (e.g. source aliases for .zshrc, apply oh-my-zsh settings etc..)
 ./deploy.sh --local   # Local mac machine
 ```
 
-It may be the case that ```./deploy.sh``` runs successfully but is missing some dependencies. If this is the case, simply install and then re-run.
+It may be that ```./deploy.sh``` runs successfully but is missing some dependencies. If this is the case, simply install and then re-run.
 Install tmux plugins with `ctrl+a I`
 
 
