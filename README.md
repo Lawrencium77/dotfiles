@@ -1,6 +1,6 @@
 # dotfiles
 
-Install dependancies (e.g. oh-my-zsh, homebrew etc...), can specify options to install specific programs: tmux, zsh, pyenv.
+Install dependencies (e.g. oh-my-zsh, homebrew etc...), can specify options to install specific programs: tmux, zsh, pyenv.
 ```bash
 # Install dependancies + tmux & zsh
 ./install.sh --tmux --zsh
