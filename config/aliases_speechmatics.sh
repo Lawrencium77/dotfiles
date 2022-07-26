@@ -195,6 +195,11 @@ qupdate () {
     [ ! -z $SINGULARITY_CONTAINER ] && ssh localhost "qupdate"|| command qupdate ;
 }
 
+qexp () {
+    # Get exp dir of job
+    echo $(dirname $(qlog $@))
+}
+
 # Only way to get a gpu is via queue
 if [ -z $CUDA_VISIBLE_DEVICES ]; then
   export CUDA_VISIBLE_DEVICES=
