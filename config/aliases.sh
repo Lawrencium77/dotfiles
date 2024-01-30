@@ -25,6 +25,10 @@ alias mv='mv -i'
 alias mkdir='mkdir -p'
 alias mva='mv -f -t /exp/lawrencea/archive'
 
+# GPU
+alias ns='nvidia-smi'
+alias nvi='nvitop'
+
 # find/read files
 alias h='head'
 alias t='tail'
