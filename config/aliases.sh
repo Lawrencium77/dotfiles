@@ -5,7 +5,7 @@
 alias cdg="cd ~/git"
 alias zrc="cd $DOT_DIR/zsh"
 alias dot="cd $DOT_DIR"
-alias jp="jupyter lab"
+alias jp="jupyter lab --ServerApp.token='123'"
 
 # -------------------------------------------------------------------
 # general
@@ -19,7 +19,6 @@ alias pl="pip list"
 
 # file and directories
 alias rmd='rm -rf'
-alias rm='echo "Use mva (instead of rm) to get rid of"'
 alias cp='cp -i'
 alias mv='mv -i'
 alias mkdir='mkdir -p'
