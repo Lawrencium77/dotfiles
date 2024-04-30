@@ -34,7 +34,7 @@ alias g1="cd /perish_g01"
 alias g2="cd /perish_g02"
 alias g3="cd /perish_g03"
 
-for i in {1..13}; do
+for i in {1..14}; do
     num=$(printf "%03d" $i)
     alias b${i}="ssh gpu${num}.grid.speechmatics.io"
 done
