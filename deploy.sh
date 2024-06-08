@@ -2,8 +2,7 @@
 set -euo pipefail
 USAGE=$(cat <<-END
     Usage: ./deploy.sh [OPTION]
-    Creates ~/.zshrc and ~/.tmux.conf with location
-    specific config
+    Creates ~/.zshrc and ~/.tmux.conf with location-specific config
 
     OPTIONS:
         --remote (DEFAULT)      deploy remote config, all aliases are sourced
@@ -50,18 +49,18 @@ if [ $LOC == 'local' ]; then
     karabiner_path=$HOME/.config/karabiner/karabiner.json
     dd_karabiner_path=$DOT_DIR/config/karabiner.json
 
-    if ! cmp -s $karabiner_path $dd_karabiner_path; then
-        read -p "karabiner.json differs from dotfiles v do you want to overwrite? (y/n) " yn
+    if [ -e $karabiner_path ] && ! cmp -s $karabiner_path $dd_karabiner_path; then
+        read -p "karabiner.json differs from dotfiles. Do you want to overwrite? (y/n) " yn
         case $yn in 
             y )
                 cat $karabiner_path > $karabiner_path.backup
-                ln -sf "$DOT_DIR/config/karabiner.json" "$karabiner_path" ;
+                ln -sf $dd_karabiner_path $karabiner_path ;
                 ;;
             n ) echo skipping...;
                 exit;;
         esac
     else
-        ln -sf "$DOT_DIR/config/karabiner.json" "$HOME/.config/karabiner/karabiner.json"
+        ln -sf $dd_karabiner_path $karabiner_path
     fi
 fi 
 

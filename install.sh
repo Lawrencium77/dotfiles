@@ -16,6 +16,10 @@ USAGE=$(cat <<-END
 END
 )
 
+if [ "$#" -eq 0 ]; then
+    echo "Please provide an option. See --help for more info." && exit 1
+fi
+
 zsh=false
 tmux=false
 delta=false
@@ -60,13 +64,13 @@ if [[ $all == true ]]; then
 fi
 
 echo " ------------ INSTALLING ON $machine MACHINE ------------ "
-# Installing on linux with apt
 if [ $machine == "Linux" ]; then
     DOT_DIR=$(dirname $(realpath $0))
     [ $zsh == true ] && sudo apt-get install zsh
     [ $tmux == true ] && sudo apt-get install tmux 
+    [ $delta == true ] && $DOT_DIR/install_scripts/install_delta.sh
+    [ $nvim == true ] && sudo apt-get install neovim
 
-# Installing on mac with homebrew
 elif [ $machine == "Mac" ]; then
     brew install coreutils  # Mac won't have realpath before coreutils installed
     DOT_DIR=$(dirname $(realpath $0))
