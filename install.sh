@@ -17,7 +17,7 @@ END
 )
 
 if [ "$#" -eq 0 ]; then
-    echo "Please provide an option. See --help for more info" && exit 1
+    echo "Please provide an option. See --help for more info." && exit 1
 fi
 
 zsh=false
