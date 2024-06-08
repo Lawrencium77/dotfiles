@@ -1,4 +1,4 @@
-## Status of Install Scripts
+# Dotfiles
 
 Follows the structure of [this simple repo](https://github.com/erees1/simple-dotfiles).
 
