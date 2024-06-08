@@ -10,6 +10,10 @@ USAGE=$(cat <<-END
 END
 )
 
+if [ "$#" -eq 0 ]; then
+    echo "Please provide an option. See --help for more info." && exit 1
+fi
+
 LOC="local"
 while (( "$#" )); do
     case "$1" in
@@ -29,11 +33,13 @@ done
 # Local and remote config
 rm $HOME/.tmux.conf
 rm -r $HOME/.config/nvim
-rm $HOME/.zshrc
+rm $HOME/.zshrc && touch $HOME/.zshrc # Empty file
 rm $HOME/.gitconfig 
-rm $HOME/.config/karabiner/karabiner.json && touch $HOME/.config/karabiner/karabiner.json # Empty file
 
-# Remote-specific config
+if [ $LOC == 'local' ]; then
+    rm $HOME/.config/karabiner/karabiner.json && touch $HOME/.config/karabiner/karabiner.json # Empty file
+fi
+
 if [ $LOC == 'remote' ]; then
     rm ~/.ipython/profile_default/ipython_config.py
     rm $HOME/.ipython/profile_default/startup/keybindings.py
