@@ -64,13 +64,13 @@ if [[ $all == true ]]; then
 fi
 
 echo " ------------ INSTALLING ON $machine MACHINE ------------ "
-# Installing on linux with apt
 if [ $machine == "Linux" ]; then
     DOT_DIR=$(dirname $(realpath $0))
+    sudo apt-get update
     [ $zsh == true ] && sudo apt-get install zsh
     [ $tmux == true ] && sudo apt-get install tmux 
+    [ $nvim == true ] && sudo apt-get install neovim
 
-# Installing on mac with homebrew
 elif [ $machine == "Mac" ]; then
     brew install coreutils  # Mac won't have realpath before coreutils installed
     DOT_DIR=$(dirname $(realpath $0))
