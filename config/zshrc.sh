@@ -15,7 +15,7 @@ fi
 
 # Set cursor width to narrow in vim and zsh.
 # Means that it doesn't change between insert & normal mode in vim.
-# Might be worth changing at some point. 
+# Might be worth changing at some point.
 _fix_cursor() {
    echo -ne '\e[6 q'
 }
@@ -32,5 +32,6 @@ plugins=(zsh-autosuggestions zsh-syntax-highlighting zsh-completions history-sub
 
 source $ZSH/oh-my-zsh.sh
 source $CONFIG_DIR/aliases.sh
+source $CONFIG_DIR/aliases_meta.sh
 source $CONFIG_DIR/p10k.zsh
 source $CONFIG_DIR/extras.sh
