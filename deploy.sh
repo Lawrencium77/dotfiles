@@ -51,7 +51,7 @@ if [ $LOC == 'local' ]; then
 
     if [ -e $karabiner_path ] && ! cmp -s $karabiner_path $dd_karabiner_path; then
         read -p "karabiner.json differs from dotfiles. Do you want to overwrite? (y/n) " yn
-        case $yn in 
+        case $yn in
             y )
                 cat $karabiner_path > $karabiner_path.backup
                 ln -sf $dd_karabiner_path $karabiner_path ;
@@ -62,11 +62,7 @@ if [ $LOC == 'local' ]; then
     else
         ln -sf $dd_karabiner_path $karabiner_path
     fi
-fi 
-
-# config/aliases_speechmatics.sh adds remote specific aliases and cmds
-[ $LOC = 'remote' ] &&  echo \
-    "source $DOT_DIR/config/aliases_speechmatics.sh" >> $HOME/.zshrc
+fi
 
 if [ $LOC == 'remote' ]; then
     echo "c.TerminalInteractiveShell.editing_mode = 'vi'" > ~/.ipython/profile_default/ipython_config.py
