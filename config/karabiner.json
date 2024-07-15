@@ -114,7 +114,8 @@
                                 "conditions": [
                                     {
                                         "bundle_identifiers": [
-                                            "com.google.Chrome"
+                                            "com.google.Chrome",
+                                            "^com.googlecode.iterm2"
                                         ],
                                         "type": "frontmost_application_if"
                                     }
