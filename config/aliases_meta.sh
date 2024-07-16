@@ -2,3 +2,4 @@
 # On-Demand Control
 # -------------------------------------------------------------------
 alias dl='dev list'
+alias dc='dev connect'
