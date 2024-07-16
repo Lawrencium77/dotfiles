@@ -37,4 +37,4 @@ source $CONFIG_DIR/p10k.zsh
 source $CONFIG_DIR/extras.sh
 
 # Hack for Meta Mac
-echo 'export PATH="$HOME/homebrew/bin:$HOME/homebrew/sbin:$PATH"'
+export PATH="$HOME/homebrew/bin:$HOME/homebrew/sbin:$PATH"
