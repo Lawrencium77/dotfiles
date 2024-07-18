@@ -3,3 +3,4 @@
 # -------------------------------------------------------------------
 alias dl='dev list'
 alias dc='dev connect'
+alias dr='dev release'
