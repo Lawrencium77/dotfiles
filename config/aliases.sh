@@ -26,6 +26,7 @@ alias mva='mv -f -t /exp/lawrencea/archive'
 
 # GPU
 alias ns='nvidia-smi'
+alias wns='watch nvidia-smi'
 alias nvi='nvitop'
 
 # find/read files
