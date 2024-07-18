@@ -2,5 +2,12 @@
 # On-Demand Control
 # -------------------------------------------------------------------
 alias dl='dev list'
-alias dc='dev connect'
 alias dr='dev release'
+
+function dc() {
+    if [[ -z $1 ]]; then
+        echo "Please provide an instance ID"
+    else
+        dev connect --hostname $1.od.fbinfra.net
+    fi
+}
