@@ -10,6 +10,7 @@ alias jp="jupyter lab --ServerApp.token='123'"
 # -------------------------------------------------------------------
 # general
 # -------------------------------------------------------------------
+
 alias exp='cd /exp/lawrencea'
 alias vm="ssh $(whoami).dev-vms.speechmatics.io"
 alias cl="clear"
@@ -156,4 +157,3 @@ alias lt='ls -ltr'        # sort by date, most recent last
 alias lm='ls -al |more'   # pipe through 'more'
 alias lr='ls -lR'         # recursive ls
 alias tree='tree -Csu'    # nice alternative to 'recursive ls'
-
