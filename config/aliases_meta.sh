@@ -20,3 +20,9 @@ function dc() {
 alias sls='sl show'
 alias hgs='hg shelve'
 alias hgu='hg unshelve'
+
+# -------------------------------------------------------------------
+# Arc
+# -------------------------------------------------------------------
+
+alias al='arc lint'
