@@ -61,3 +61,6 @@ function git_prepare() {
 zle -N git_prepare
 bindkey -r "^G"
 bindkey "^G" git_prepare
+
+# For editing command-line statements using vim
+bindkey '^V' edit-command-line
