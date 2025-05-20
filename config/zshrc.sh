@@ -32,6 +32,6 @@ plugins=(zsh-autosuggestions zsh-syntax-highlighting zsh-completions history-sub
 
 source $ZSH/oh-my-zsh.sh
 source $CONFIG_DIR/aliases.sh
-source $CONFIG_DIR/aliases_gdm.sh
 source $CONFIG_DIR/p10k.zsh
 source $CONFIG_DIR/extras.sh
+source $CONFIG_DIR/extras_gdm.sh
