@@ -2,7 +2,14 @@
 alias colab="/google/bin/releases/grp-ix-team/rapid/colab-cli/cli.par"
 alias dm_python="/google/bin/releases/deepmind/python/dm_python3/dm_python3.par"
 alias ce="gcert"
+
+# Mercurial aliases
+alias hgl="hg lint"
+
+# Blaze Aliases
 alias bcl="build_cleaner"
+alias blr="blaze run"
+alias blb="blaze build"
 
 source /etc/bash_completion.d/hgd
 
