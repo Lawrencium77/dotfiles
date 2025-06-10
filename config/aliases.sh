@@ -133,6 +133,7 @@ alias gpsup='git push --set-upstream origin $(git_current_branch)'
 # tmux
 #-------------------------------------------------------------
 
+alias tm="tmux"
 alias ta="tmux attach"
 alias taa="tmux attach -t"
 alias tad="tmux attach -d -t"
