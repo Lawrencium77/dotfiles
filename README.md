@@ -50,7 +50,7 @@ For dev, it can be useful to undo all effects of running `deply.sh`. The `reset.
 
 ```bash
 # Remote Linux machine
-./deploy.sh  --remote
+./reset.sh  --remote
 # Local Mac machine
-./deploy.sh --local
+./reset.sh --local
 ```
