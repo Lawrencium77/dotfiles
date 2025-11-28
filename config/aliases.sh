@@ -11,8 +11,6 @@ alias jp="jupyter lab --ServerApp.token='123'"
 # general
 # -------------------------------------------------------------------
 
-alias exp='cd /exp/lawrencea'
-alias vm="ssh $(whoami).dev-vms.speechmatics.io"
 alias cl="clear"
 alias ip="ipython"
 alias ho="hostname"
