@@ -21,8 +21,7 @@ alias flaze="/google/bin/releases/ix-ml/rapid/flaze/flaze"
 # XManager
 alias xmanager="/google/bin/releases/xmanager/cli/xmanager.par"
 
-# Gemini API key
-export GEMINI_API_KEY=AIzaSyAoWmmJt0rZDquL2j6rhXBzHcKZxYVoIw4
+# Gemini CLI
 alias gemini='/google/bin/releases/gemini-cli/tools/gemini'
 alias gem='/google/bin/releases/gemini-cli/tools/gemini'
 
