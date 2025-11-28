@@ -39,6 +39,9 @@ source "$DOT_DIR/nvim/setup_init.sh"
 
 # zshrc setup
 echo "source $DOT_DIR/config/zshrc.sh" > $HOME/.zshrc
+if [ "$LOC" = "remote" ]; then
+  echo "source $DOT_DIR/config/extras_gdm.sh" >> $HOME/.zshrc
+fi
 
 # Gitconfig setup
 source "$DOT_DIR/gitconfig/setup_gitconfig.sh"
