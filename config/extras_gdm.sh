@@ -4,7 +4,6 @@ alias dm_python="/google/bin/releases/deepmind/python/dm_python3/dm_python3.par"
 alias ce="gcert"
 alias cns2util='/google/bin/releases/cns2/tools/cns2util'
 alias fls="fileutil ls"
-alias vm="rw --gmosh --tmux lawrenceatkins.c.googlers.com"
 
 # Fig aliases
 alias hgl="hg lint"

@@ -6,6 +6,7 @@ alias cdg="cd ~/git"
 alias zrc="cd $DOT_DIR/zsh"
 alias dot="cd $DOT_DIR"
 alias jp="jupyter lab --ServerApp.token='123'"
+alias vm="rw --gmosh --tmux lawrenceatkins.c.googlers.com"
 
 # -------------------------------------------------------------------
 # general
