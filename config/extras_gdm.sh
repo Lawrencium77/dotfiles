@@ -13,6 +13,7 @@ alias hgau="hg amend && hg upload chain"
 alias bcl="build_cleaner"
 alias blr="blaze run"
 alias blb="blaze build"
+alias blt="blaze test"
 
 # Flaze
 alias flaze="/google/bin/releases/ix-ml/rapid/flaze/flaze"
