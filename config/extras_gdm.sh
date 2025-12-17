@@ -26,6 +26,9 @@ alias xmanager="/google/bin/releases/xmanager/cli/xmanager.par"
 alias gemini='/google/bin/releases/gemini-cli/tools/gemini'
 alias gem='/google/bin/releases/gemini-cli/tools/gemini'
 
+# Erratic
+alias er='/google/data/ro/users/ho/hooper/er'
+
 # Debugpy
 alias debugpy='/google/bin/releases/debugpy-team/public/debugpy'
 
