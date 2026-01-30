@@ -32,6 +32,11 @@ alias er='/google/data/ro/users/ho/hooper/er'
 # Debugpy
 alias debugpy='/google/bin/releases/debugpy-team/public/debugpy'
 
+# `lp-run`: like "blaze run" for DM LaunchPad targets, but it propagates build
+# flags to XManager to avoid double rebuilding of binaries.
+alias lp-run='/google/src/head/depot/google3/third_party/py/launchpad/scripts/lp-run.sh'
+export_alias lp_run '/google/src/head/depot/google3/third_party/py/launchpad/scripts/lp-run.sh'
+
 # Pyfactor
 alias pyfactor=/google/data/ro/teams/youtube-code-health/pyfactor
 
